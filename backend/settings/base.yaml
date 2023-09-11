@@ -3,15 +3,15 @@ application:
   port: 5000
 
 database:
-  username: "<your_db_username>"
-  password: "<your_db_password>"
-  port: <your_db_port>
-  host: "<your_db_host>"
-  database_name: "<your_db_name>"
+  username: "seilylook"
+  password: "rlatpgus1!"
+  port: 5432
+  host: "localhost"
+  database_name: "rust_auth_db_dev"
   require_ssl: false
 
 redis:
-  uri: "<your_redis_uri>"
+  uri: "redis://127.0.0.1:6379"
   pool_max_open: 16
   pool_max_idle: 8
   pool_timeout_seconds: 1
