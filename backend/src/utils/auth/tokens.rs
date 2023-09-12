@@ -11,3 +11,4 @@ use pasetors::{local, version::V4, Local};
 // So it can not be typo'd anywhere it's used
 const SESSION_KEY_PREFIX: &str = "valid_session_key_for_{}";
 
+// Issues a pasetor token to a user. The token has the user's id
