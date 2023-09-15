@@ -1,4 +1,4 @@
-lettre::AsyncTransport;
+use lettre::AsyncTransport;
 
 #[tracing::instrument(
     name = "Generic e-mail sending function.",
