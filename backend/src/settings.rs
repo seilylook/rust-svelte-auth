@@ -7,6 +7,9 @@ pub struct Settings {
     pub debug: bool,
     pub database: DatabaseSettings,
     pub redis: RedisSettings,
+    pub secret: Secret,
+    pub email: EmailSettings,
+    pub frontend_url: String,
 }
 
 /// Application's specific settings to expose `port`,
@@ -33,6 +36,20 @@ impl Environment {
             Environment::Production => "production",
         }
     }
+}
+
+#[derive(serde::Deserialize, Clone)]
+pub struct Secret {
+    pub secret_key: String,
+    pub token_expiration: i64,
+    pub hmac_secret: String,
+}
+
+#[derive(serde::Deserialize, Clone)]
+pub struct EmailSettings {
+    pub host: String,
+    pub host_user: String,
+    pub host_user_password: String,
 }
 
 impl TryFrom<String> for Environment {

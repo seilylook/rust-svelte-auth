@@ -16,3 +16,15 @@ redis:
   pool_max_idle: 8
   pool_timeout_seconds: 1
   pool_expire_seconds: 60
+
+email:
+  host: "smtp.gmail.com"
+  host_user: ""
+  host_user_password: ""
+
+secret:
+  secret_key: "yxyo phmd tznc kkyd"
+  token_expiration: 30
+  hmac_secret: "3daad17f50d3577ae06406213073aa28e5cda75b97f5f35170e63653bbb66d8d"
+
+frontend_url: "https://localhost:3000"
